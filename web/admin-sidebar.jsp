@@ -78,7 +78,7 @@
                                 <a class="nav-link" href="#">Page</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href=login?action=logout>Logout</a>
                             </li>
                         </ul>
                     </div>

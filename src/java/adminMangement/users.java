@@ -44,6 +44,18 @@ public class users implements java.io.Serializable {
     public String getName() {
         return name;
     }
+    
+    
+    
+     public boolean login(String email, String password) throws SQLException {
+
+        rs = st.executeQuery("select *  from users where email='"+email+ "' and "+ "password ='"+ password+"'");
+              if( rs.next()){
+          return true;
+     }
+              else 
+        return false;
+    }
 
     public ResultSet getAllUsers() throws SQLException {
 
@@ -70,7 +82,7 @@ public class users implements java.io.Serializable {
         int a = 0;
 
         String flag = this.getIsBlocked(id);
-        System.out.println("zambian = " + flag);
+        //System.out.println("zambian = " + flag);
         if (flag.equals("1")) {
             a = st.executeUpdate("UPDATE users SET isBlocked ='0' WHERE users.id =" + id);
 

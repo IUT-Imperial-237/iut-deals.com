@@ -16,6 +16,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -27,6 +28,8 @@ public class adminManagement extends HttpServlet {
     private ResultSet rs = null;
     private users user = new users();
     private categories cat = new categories();
+    HttpSession session =  null;
+
         private subcategories subcat = new subcategories();
 
 
@@ -39,22 +42,24 @@ public class adminManagement extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet adminManagement</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet adminManagement at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
+//    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        response.setContentType("text/html;charset=UTF-8");
+//        try (PrintWriter out = response.getWriter()) {
+//            
+//            
+//            /* TODO output your page here. You may use following sample code. */
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Servlet adminManagement</title>");
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<h1>Servlet adminManagement at " + request.getContextPath() + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
+//        }
+//    }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -162,6 +167,12 @@ public class adminManagement extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+             session =  request.getSession();
+
+        
+      
+        
+        
         if (request.getParameter("action").equals("addCat")) {
            String name = request.getParameter("name");
             try {
@@ -179,6 +190,8 @@ public class adminManagement extends HttpServlet {
                 Logger.getLogger(adminManagement.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        
         
         
                 if (request.getParameter("action").equals("addSubCat")) {

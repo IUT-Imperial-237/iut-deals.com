@@ -1,0 +1,120 @@
+/* css header */
+.first_backg{
+   
+    padding-top: 0% !important;
+    padding-bottom: 0% !important;
+    margin-top: 0% !important;
+    margin-bottom: 0% !important;
+}
+.first_nav{
+    margin-left: 20% !important;
+   
+      
+}
+@media only screen and (max-width: 600px) {
+    .first_nav {
+        margin-left: 0% !important;    }
+  }
+
+/* css second header */
+.ftco_navbar{
+    opacity:1 !important;
+
+    background-color: none !important;
+}
+.logo_nav{
+    opacity: 1 !important;
+    font-weight:bold !important;
+}
+
+/* slider css */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+.img_cover{
+    width: 100% !important;
+    height: 580px !important;
+   opacity: 1 !important;
+}
+@media only screen and (max-width: 600px) {
+    .img_cover {
+        height:350px !important;    }
+  }
+  @media screen and (max-width: 800px) and (min-width: 601px) {
+    .img_cover {
+        height:400px !important;    }
+  }
+
+
+  /* cart css */
+  #main-cat {
+    text-align: center;
+    margin-top: 5% !important;
+  }
+  
+  #main-cat .box .icon {
+    position: absolute;
+    font-size: 120px;
+    width: 100%;
+    text-align: center;
+    top: -20px;
+    left: 0;
+    height: 100%;
+    float: left;
+    color: #eee;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 1;
+  
+  }
+  
+  #main-cat .box h3 {
+    position: relative;
+    margin: 0 0 10px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    z-index: 2;
+  }
+  
+  #main-cat .box h3 a:hover {
+    text-decoration: none;
+  }
+  
+  #main-cat .box p {
+    position: relative;
+    color: #555;
+    z-index: 2;
+  }
+  .clickable {
+    cursor: pointer;
+  }
+  
+  .box {
+    background: #fff;
+    margin: 0 0 30px;
+    border: solid 1px #e6e6e6;
+    padding: 20px;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+/* footer */
+.icon-twitter,.icon-facebook,.icon-instagram{
+   padding-left: 10% !important;
+}
+hr{
+    color: white !important;
+}
+.p_footer{
+    color: white;
+    text-align: center;
+}
+.h6_span_footer{
+    color: white ;
+}
+hr{
+    border-top: 0.5px solid white;
+}
